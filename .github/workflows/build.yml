@@ -1,5 +1,6 @@
 name: Check and Release Build
 on:
+  workflow_dispatch:
   push:
     branches: ['*']
 jobs:
