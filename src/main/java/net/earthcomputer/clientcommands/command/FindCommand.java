@@ -38,7 +38,6 @@ public class FindCommand {
     }
 
     private static int listEntities(FabricClientCommandSource source, CEntitySelector selector) throws CommandSyntaxException {
-        ClientCommandsServer.requirePrivileges();
         boolean keepSearching = getFlag(source, FLAG_KEEP_SEARCHING);
         if (keepSearching) {
             String taskName = TaskManager.addTask("cfind", new FindTask(source, selector));
